@@ -1,5 +1,5 @@
 /* Estilo do Fundo e Posição dos Elementos */
-.home {
+.home-dark {
     width: 100%;
     height: 100vh;
     background-image: url("https://i.ibb.co/sbW4Pk2/bg-desktop.jpg");
@@ -9,21 +9,28 @@
     justify-content: center;
     color: white;
 }
+.home-light {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.ibb.co/NpmTmLP/bg-desktop-light.jpg");
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
 .section-home {
     width: 100%;
     height: auto;
 }
 /* tamanho do avatar/ foto de Perfil*/
 #avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 90px;
     margin-top: 80px;
-    width: 100px;
 }
 
-/* Incones da Biblioteca https://react-icons */
-.incons,
-.span-home {
-    color: white;
-}
 /* Botoes do Modo Light e Dark */
 .select-mode {
     margin: 10px;
@@ -67,19 +74,21 @@
     width: 100%;
     background-color: white;
     color: black;
-    padding: 5px;
+    padding: 10px;
     border: none;
     border-radius: 2px;
 }
 
 /* Incones */
-
-.incons{
+.incons {
     width: 100%;
+    font-size: 25px;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 50px;
 }
+
+/*****  EFEITOS   ******/
 
 /* Hover Dos Elementos */
 .select-mode button:hover {
@@ -89,3 +98,25 @@
     color: #bb15f3;
     background-color: #111314;
 }
+/* Efeitos Incones da Biblioteca https://react-icons */
+.home-light .incons,
+.home-light .span-home {
+    color: black;
+}
+.home-light .btns-links div a {
+    border: 1px solid black;
+}
+
+.home-dark .incons,
+.home-dark .span-home {
+    color: white;
+}
+
+/* Responsividade  */
+@media (max-width: 600px) {
+    .home-dark{background-image: url('https://i.ibb.co/dMvsjLy/bg-mobile.jpg');}
+    .home-light{background-image: url('https://i.ibb.co/JKCpnT4/bg-mobile-light.jpg');}
+    .span-home{
+        font-size: 0.8rem;
+    }
+  }

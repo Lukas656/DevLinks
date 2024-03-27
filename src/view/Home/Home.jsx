@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
@@ -7,23 +7,24 @@ import { FaHeart } from "react-icons/fa";
 import { LuSun } from "react-icons/lu";
 import { BsMoonStars } from "react-icons/bs";
 import { Link } from "react-router-dom";
-let avatar = 'https://i.ibb.co/7rJY454/user-Padrao.png';
+let avatar = 'https://i.ibb.co/SP666Gk/perfil3.jpg';
 
 const Home = () => { 
-  
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const toggleMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
-    <div className="home ">
+    <div className={isDarkMode ? "home-dark" : "home-light"}>
         <section className="section-home">
             <img src={avatar} alt="avatar" id="avatar"/>
             <p>@lucasSantos</p>
             <div className="select-mode">
-              <button>
-              <BsMoonStars/>
-              </button>
-              <button>
-              <LuSun/>
-              </button>
-            </div>
+          <button onClick={toggleMode}>
+            {isDarkMode ? <BsMoonStars /> : <LuSun />}
+          </button>
+        </div>
             <div className="btns-links">
               <div>
              <Link to="/projetos">Projetos</Link>
