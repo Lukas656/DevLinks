@@ -1,5 +1,5 @@
 # DevLink
-#Link do Projeto em Execução: 
+#Link do Projeto em Execução: https://6605997d8a59df0008d320b6--animated-cannoli-1f9d98.netlify.app/
 
 ## Imagens
 ![Captura de tela 2024-03-27 160656](https://github.com/Lukas656/DevLinks/assets/72577273/93b19711-0e12-4804-a267-6a51752a12fd)
