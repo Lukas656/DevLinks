@@ -5,6 +5,9 @@
   padding: 0px;
   font-family: "Roboto", sans-serif;
 }
+body{
+  height: 100vh;
+}
 :root {
   --bg-escuro: #111314;
   --bg-transparent: rgba(255, 255, 255, 0.315);
