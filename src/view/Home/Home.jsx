@@ -1,36 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
+import DarkLight from "../../components/Dark-Ligth";
 import "./home.css";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiInstagram } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
-import { LuSun } from "react-icons/lu";
-import { BsMoonStars } from "react-icons/bs";
 import { Link } from "react-router-dom";
-let avatar = 'https://i.ibb.co/SP666Gk/perfil3.jpg';
+let avatar = 'https://github.com/Lukas656.png';
 
 const Home = () => { 
-  const [isDarkMode, setIsDarkMode] = useState(true);
 
-  const toggleMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
   return (
-    <div className={isDarkMode ? "home-dark" : "home-light"}>
+    <div>
         <section className="section-home">
             <img src={avatar} alt="avatar" id="avatar"/>
-            <p>@lucasSantos</p>
-            <div className="select-mode">
-          <button onClick={toggleMode}>
-            {isDarkMode ? <BsMoonStars /> : <LuSun />}
-          </button>
-        </div>
+            <p>@Lucas Santos Nascimento</p>
+            <DarkLight/>
             <div className="btns-links">
               <div>
-             <Link to="/projetos">Projetos</Link>
-              <Link to="/">Linkedin</Link>
-              <Link to="/">GitHub</Link>
-              <Link to="/">Intagram</Link>
+             <Link to="/projetos">Ver Meu Protifólio</Link>
+              <Link to="https://www.linkedin.com/in/link-lucas-santos/">Linkedin</Link>
+              <Link to="https://github.com/Lukas656">GitHub</Link>
+              <Link to="https://www.instagram.com/lucas.santos.2002/">Intagram</Link>
               </div>
             </div>
             <div className="incons">
@@ -40,7 +31,7 @@ const Home = () => {
             </div>
 
             
-            <span className="span-home">Desafio da <a href="https://app.rocketseat.com.br/">Roketseat</a> Feito com <FaHeart /> por Lucas Santos</span>
+            <span className="span-home">&copy;2024 Desafio da <a href="https://app.rocketseat.com.br/">Roketseat</a> Feito com <FaHeart /> por Lucas Santos</span>
         </section>
     </div>
   );

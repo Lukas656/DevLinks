@@ -1,0 +1,27 @@
+.nav-header {
+    width: 100%;
+    padding: 15px 0px 0px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(46, 49, 51, 0.247);
+}
+.ul-header {
+    width: 50%;
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-around;
+}
+.ul-header li a{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.theme-header{
+    position: relative;
+    top: -9px;    
+}
+
+@media (max-width: 600px) {
+    .ul-header li a{
+        font-size: 1rem;
+    }
+}

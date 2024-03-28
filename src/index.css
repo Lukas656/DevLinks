@@ -1,8 +1,107 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
   margin: 0px;
   padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --bg-escuro: #111314;
+  --bg-transparent: rgba(255, 255, 255, 0.315);
+  --branco: #ffff;
+  --roxo: #bb15f3;
 }
 
-a{
-  color: #5E4185;
+li {
+  list-style: none;
+}
+/* Estilo do Fundo e Posição dos Elementos */
+.mode-dark {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.ibb.co/sbW4Pk2/bg-desktop.jpg");
+  background-position: top center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  color: var(--branco);
+}
+.mode-light {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.ibb.co/NpmTmLP/bg-desktop-light.jpg");
+  background-position: top center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  color: var(--bg-escuro);
+}
+
+/* Botoes do Modo Light e Dark */
+.select-mode {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.select-mode button {
+  background-color: var(--bg-transparent);
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+.select-mode button svg {
+  font-size: 20px;
+  height: 30px;
+}
+
+/*****  EFEITOS   ******/
+
+/* Hover Dos Elementos */
+.select-mode button:hover {
+  background-color: var(--roxo);
+}
+.btns-links div a:hover {
+  background-color: var(--bg-escuro);
+}
+
+/* Efeitos Incones da Biblioteca https://react-icons */
+.mode-light .incons,
+.mode-dark a,
+.mode-light .span-home {
+  font-weight: 400;
+  color: var(--bg-escuro);
+}
+.mode-light .btns-links div a {
+  border: 1px solid var(--bg-escuro);
+}
+
+.mode-dark .incons,
+.mode-dark a,
+.mode-dark .span-home {
+  font-weight: 400;
+  color: var(--branco);
+}
+
+a:hover {
+  color: var(--roxo);
+}
+
+/* Responsividade  */
+@media (max-width: 600px) {
+  .mode-dark {
+    background-image: url("https://i.ibb.co/dMvsjLy/bg-mobile.jpg");
+  }
+  .mode-light {
+    background-image: url("https://i.ibb.co/JKCpnT4/bg-mobile-light.jpg");
+  }
+  .span-home {
+    font-size: 0.8rem;
+  }
 }

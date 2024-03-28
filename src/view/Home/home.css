@@ -1,24 +1,3 @@
-/* Estilo do Fundo e Posição dos Elementos */
-.home-dark {
-    width: 100%;
-    height: 100vh;
-    background-image: url("https://i.ibb.co/sbW4Pk2/bg-desktop.jpg");
-    background-position: top center;
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    color: white;
-}
-.home-light {
-    width: 100%;
-    height: 100vh;
-    background-image: url("https://i.ibb.co/NpmTmLP/bg-desktop-light.jpg");
-    background-position: top center;
-    background-size: cover;
-    text-align: center;
-    justify-content: center;
-    color: black;
-}
 .section-home {
     width: 100%;
     height: auto;
@@ -29,30 +8,9 @@
     height: 150px;
     border-radius: 90px;
     margin-top: 80px;
+    border: 2px solid var(--roxo);
 }
 
-/* Botoes do Modo Light e Dark */
-.select-mode {
-    margin: 10px;
-    text-align: center;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.select-mode button {
-    background-color: rgba(255, 255, 255, 0.315);
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
-    text-align: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-}
-.select-mode button svg {
-    height: 30px;
-}
 /* Botoes dos Links */
 .btns-links {
     width: 95%;
@@ -72,11 +30,14 @@
 
 .btns-links div a {
     width: 100%;
-    background-color: white;
-    color: black;
-    padding: 10px;
+    padding: 15px;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
+    font-weight: 500;
+   
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webki-backdrop-filter: blur(16px);
 }
 
 /* Incones */
@@ -87,36 +48,3 @@
     justify-content: space-evenly;
     margin-bottom: 50px;
 }
-
-/*****  EFEITOS   ******/
-
-/* Hover Dos Elementos */
-.select-mode button:hover {
-    background-color: #bb15f3;
-}
-.btns-links div a:hover {
-    color: #bb15f3;
-    background-color: #111314;
-}
-/* Efeitos Incones da Biblioteca https://react-icons */
-.home-light .incons,
-.home-light .span-home {
-    color: black;
-}
-.home-light .btns-links div a {
-    border: 1px solid black;
-}
-
-.home-dark .incons,
-.home-dark .span-home {
-    color: white;
-}
-
-/* Responsividade  */
-@media (max-width: 600px) {
-    .home-dark{background-image: url('https://i.ibb.co/dMvsjLy/bg-mobile.jpg');}
-    .home-light{background-image: url('https://i.ibb.co/JKCpnT4/bg-mobile-light.jpg');}
-    .span-home{
-        font-size: 0.8rem;
-    }
-  }
